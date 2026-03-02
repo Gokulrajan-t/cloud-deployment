@@ -1,4 +1,4 @@
-/*const express = require('express');
+const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 
@@ -37,8 +37,9 @@ app.get('/todos', async (req, res) => {
     }
 });
 
-app.listen(3000, () => console.log("Server started on port 3000"));   */
-const express = require('express');
+app.listen(3000, () => console.log("Server started on port 3000"));   
+
+/*const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 
@@ -88,4 +89,4 @@ app.get('/todos', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`)); */
