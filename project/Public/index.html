@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo GET Example</title>
+</head>
+<body>
+
+    <h1>Todo List</h1>
+
+    <button onclick="loadTodos()">Load Todos</button>
+
+    <ul id="todoList"></ul>
+
+<script>
+async function loadTodos() {
+    const response = await fetch('/todos');
+    const data = await response.json();
+
+    const list = document.getElementById('todoList');
+    list.innerHTML = '';
+
+    data.forEach(todo => {
+        const li = document.createElement('li');
+        li.textContent = todo.title + " - " + todo.description;
+        list.appendChild(li);
+    });
+}
+</script>
+
+</body>
+</html>    index.html
