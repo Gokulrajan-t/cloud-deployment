@@ -52,9 +52,9 @@ app.use(express.static('Public'));
 // ------------------ DATABASE CONNECTION ------------------
 
 // Use Railway environment variable
-const MONGO_URI = process.env.MONGO_URI;
 
-mongoose.connect(MONGO_URI)
+
+mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('Database connected'))
     .catch((err) => console.log("DB Error:", err));
 
